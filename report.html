@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PotatoSMP - Report</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">PotatoSMP</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="report.html" class="active">Report</a></li>
+                <li><a href="staff.html" class="staff-link">Staff</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <div class="announcement-banner" id="announcementBanner">
+        <p id="announcementText">🎉 Welcome to PotatoSMP! Join our server today!</p>
+        <button class="close-btn" id="closeAnnouncement">✕</button>
+    </div>
+
+    <main class="page-content">
+        <h1 class="page-title">Report a Player</h1>
+        
+        <div class="report-container">
+            <form id="reportForm">
+                <div class="form-group">
+                    <label for="reporterName">Your Name</label>
+                    <input type="text" id="reporterName" name="reporterName" required placeholder="Enter your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="reportedPlayer">Player Being Reported</label>
+                    <input type="text" id="reportedPlayer" name="reportedPlayer" required placeholder="Enter the player's name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="reason">Reason</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">Select a reason</option>
+                        <option value="Hacking">Hacking/Cheating</option>
+                        <option value="Griefing">Griefing</option>
+                        <option value="Harassment">Harassment</option>
+                        <option value="Spam">Spamming</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="details">Extra Details</label>
+                    <textarea id="details" name="details" rows="5" required placeholder="Provide any additional details about the incident"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Report</button>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h2>Report Submitted!</h2>
+                <p>Your report has been submitted successfully. Staff will review it shortly.</p>
+                <button class="back-btn" onclick="window.location.href='index.html'">Return to Home</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PotatoSMP. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/report.js"></script>
+</body>
+</html>
